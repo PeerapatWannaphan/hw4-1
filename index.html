@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บันทึกค่าใช้จ่าย</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-5">
+    <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-xl font-bold mb-4">เพิ่มค่าใช้จ่าย</h2>
+        <form id="expense-form">
+            <input type="text" id="title" placeholder="ชื่อรายการ" class="w-full p-2 border rounded mb-2" required>
+            <input type="number" id="amount" placeholder="จำนวนเงิน" class="w-full p-2 border rounded mb-2" required>
+            <select id="category" class="w-full p-2 border rounded mb-2">
+                <option value="อาหาร">อาหาร</option>
+                <option value="เดินทาง">เดินทาง</option>
+                <option value="ช็อปปิ้ง">ช็อปปิ้ง</option>
+                <option value="อื่นๆ">อื่นๆ</option>
+            </select>
+            <input type="date" id="date" class="w-full p-2 border rounded mb-2" required>
+            <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded">บันทึก</button>
+        </form>
+        <a href="report.html" class="block text-center mt-4 text-blue-600">ดูรายงานค่าใช้จ่าย</a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
