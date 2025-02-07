@@ -9,3 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
     function saveExpenses(expenses) {
         localStorage.setItem("expenses", JSON.stringify(expenses));
     }
+
+    function addExpense(expenseData) {
+        const expenses = getExpenses();
+        expenses.push(expenseData);
+        saveExpenses(expenses);
+    }
