@@ -27,3 +27,21 @@ document.addEventListener("DOMContentLoaded", () => {
             expenseList.appendChild(div);
         });
     }
+
+    if (form) {
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const title = document.getElementById("title").value.trim();
+            const amount = document.getElementById("amount").value.trim();
+            const category = document.getElementById("category").value;
+            const date = document.getElementById("date").value;
+
+            if (title && amount && date) {
+                addExpense({ id: Date.now(), title, amount, category, date });
+                form.reset();
+            }
+        });
+    }
+
+    renderExpenses();
+});
